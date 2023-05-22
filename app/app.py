@@ -5,6 +5,10 @@ from consumer import consumer
 
 app = Flask(__name__)
 
+@app.route('/')
+def hello_world():
+    return "my-next-game api"
+
 @app.route('/generate')
 def gen():
     return generator.generate()
